@@ -7,7 +7,7 @@ import telebot
 bot = telebot.TeleBot(config.token)
 
 @bot.message_handler(content_types=["text"])
-def send_message_back_messages(message): # 
+def send_message_back(message): 
     bot.send_message(message.chat.id, message.text)
 
 if __name__ == '__main__':
